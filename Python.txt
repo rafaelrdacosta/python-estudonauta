@@ -1,0 +1,274 @@
+1) Instalando o Python3 e o IDLE
+
+
+www.python.org
+downloads
+latest Python 3 release - Python 3.13.2 (5 MAR 25)
+Windows installer (64-bit)
+
+2) Primeiros comandos em Python
+
+Delimitador de mensagem - ' ' ou " "
+toda função em Python é delimitada por ( )
+print('Olá, Mundo!')
+
+Números não precisa usar aspas
+print(7 + 4) => irá imprime 11
+
+Concatenação (+ ou ,)
+print('7' + '4') =>  imprime 74
+
+print('Olá' + 5) => error
+
+print('Olá', 5) => imprime Olá 5
+
+Variáveis - toda variável é um objeto em Python
+
+nome = 'Guanabara'
+idade = 25
+peso = 75.8
+
+print(nome, idade, peso) //Não pode ser com +
+
+Função input
+nome = input('Qual é seu nome?')
+idade = input('Quantos anos você tem?')
+peso = input('Quanto você pesa?')
+print(nome, idade, peso)
+
+
+3) Instalando o Pycharm e o QPython3
+
+IDE - Ambiente de desenvolvimento integrado
+IDE Pycharm
+
+www.jetbrains.com
+baixar Pycharm Community
+
+4) Tipos primitivos e saída de dados
+	
+int -> números inteiros
+float -> reais ou ponto flutuante
+bool -> True ou False
+str -> string
+
+nome = input('Digite o seu nome: ')
+print('É um prazer te conhecer, {}!'.format(nome))
+
+print(type(nome)) 
+saída -> <class 'str'>
+
+print(f'A soma entre {num1} e {num2} vale {s}.')
+print('A soma entre {} e {} vale {}.'.format(num1, num2, s))
+
+Teste de tipo
+
+a = input('Digite algo: ')
+print(a.isnumeric())  -> numérico
+saída -> True or False
+
+b = input('Digite algo: ')
+print(b.isalpha())  -> alphabético
+saída -> True or False
+
+c = input('Digite algo: ')
+print(c.isalnum()) -> alfanumérico
+saída -> True or False
+
+isupper, islower, isdigit, isspace, istitle
+
+
+5) Operadores aritméticos
+
++ adição
+- subtração
+* multiplicação
+/ divisão 
+** potência  ----------> função pow(x,y) == x**y
+// divisão inteira
+% resto da divisão ou módulo
+
+
+Ordem de precedência
+
+1 -> parênteses
+2 -> **
+3 -> *  /  //  %
+4 -> +  -
+
+Raiz quadrada 
+25**(1/2) == 5
+raiz = math.sqrt(25) == 5
+
+Raiz cúbica
+127**(1/3)  == 5.026525...
+
+'Oi' * 5 -> OiOiOiOiOi
+'=' * 7 -> =======
+
+Uso do print
+
+nome = Rafael
+print('Prazer em te conhecer {:20}!'.format(nome))
+Prazer em te conhecer Rafael              !        ----> vai ocupar vinte espaços alinhados à esquerda
+
+print('Prazer em te conhecer {:>20}!'.format(nome))
+Prazer em te conhecer               Rafael!       -----> alinhamento à direita
+
+print('Prazer em te conhecer {:<20}!'.format(nome))
+Prazer em te conhecer Rafael              !        ----> alinhamento à esquerda
+
+print('Prazer em te conhecer {:^20}!'.format(nome))
+Prazer em te conhecer        Rafael       !        ----> centralizado
+
+print('Prazer em te conhecer {:=^20}!'.format(nome))
+Prazer em te conhecer =======Rafael=======!        ----> centralizado com o caracter
+
+print('A soma vale {}'.format(n1+n2))
+print('A soma é {}, o produto é {} e a divisão é {:.2f}.'.format(s, m, d))
+
+print('A soma é {}, o produto é {} e a divisão é {:.2f}.'.format(s, m,d), end=' ')  ---> end no final não quebra linha
+print('A divisão inteira é {} e a potência é {}.'.format(di, e))
+
+\n é a quebra de linha
+
+
+6) Utilizando módulos
+
+Comando para importar bibliotecas --> import "nome biblioteca"
+Ex: import math --> importa a biblioteca com todas as funcionalidades de matemática
+	ceil - arrendondamento para cima
+	floor - arrendondamento para baixo
+	trunc - retira os dígitos da vírgula para frente
+	pow - calcular um número elevado a sua potência
+	sqrt - raiz quadrada
+	factorial - cálculo fatorial
+aplicação --> math.ceil()
+
+Comando para importar parte da biblioteca --> from "biblioteca" import "função"
+Ex: from math import sqrt
+    from math import sqrt, ceil	
+aplicação --> sqrt()
+
+Bibliotecas externas PyPI - python.org
+import emoji
+clica em cima e quando aparecer a lâmpada vermelha, clica em cima, e escolhe install package emoji
+no pycharm --> settings, pasta do projeto, python interpreter, e clicar no +
+
+import pygame --> tocar MP3
+
+6) Manipulando textos
+
+- Cadeia de caracteres ou strings
+- Ex: frase = 'Curso em Vídeo Python'
+
+- Técnica de fatiamento
+frase[9] == V
+frase[9:14] == Video
+frase[9:21] == Video Python	
+frase[9:21:2] == Vdo Pto
+frase[:5] == Curso
+frase[15:] == Python
+frase[9::3] == VePh --> até o final pulando de três em três
+
+- Análise
+len(frase) == 21 --> comprimento da frase
+frase.count('o') == 3 --> quantos 'o' tem na frase
+frase.count('o', 0, 13) == 2 --> quantos 'o' tem até o caractere 13, excele ele
+frase.find('deo') == 11 --> a string 'deo' começou no caractere 11
+frase.find('Android') == -1 --> significa que não existe esta string em frase
+'Curso' in frase == True   --> existe a string Curso em frase
+
+- Transformação
+frase.replace('Python', 'Android') == Curso em Vídeo Android
+frase.upper() == CURSO EM VÍDEO PYTHON
+frase.lower() ==  curso em vídeo python
+frase.capitalize() == Curso em vídeo python  --> somente a primeira letra maiúscula
+frase.title() == Curso Em Vídeo Python --> maiúscula todos as primeiras letras das palavras
+
+frase = '   Aprenda Python  '  --> caracteres vazios no início e fim da string
+
+frase.strip() == 'Aprenda Python' --> remove espaços vazios no início e no fim
+frase.rstrip() == '   Aprenda Python' --> remove espaços no final
+frase.lstrip() == 'Aprenda Python  ' --> remove espaços do início
+
+- Divisão
+frase = 'Curso em Vídeo Python'
+frase.split() == ['Curso', 'em', 'Vídeo', 'Python'] --> gera uma lista 
+
+
+- Junção
+
+'-'.join(frase) == Curso-em-Vídeo-Python
+
+- Texto longo em mais de uma linha usar o print com """ no início e fim """.
+
+7) Condições
+
+if <condição>:
+	bloco True
+else:
+	bloco False
+
+Condição simplificada
+print('bloco True' if <condição> True else 'bloco false')
+
+8) Cores no terminal
+
+ANSI - escape sequence
+Representação de cores - \033C[<código da cor>m
+código da cor = style;text;back
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
