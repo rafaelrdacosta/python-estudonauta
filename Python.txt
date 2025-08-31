@@ -1,49 +1,56 @@
 1) Instalando o Python3 e o IDLE
 
+    www.python.org
+    downloads
+    latest Python 3 release - Python 3.13.2 (5 MAR 25)
+    Windows installer (64-bit)
 
-www.python.org
-downloads
-latest Python 3 release - Python 3.13.2 (5 MAR 25)
-Windows installer (64-bit)
+    'import this' no IDLE Shell => irá mostrar o zen do Python
 
 2) Primeiros comandos em Python
 
-Delimitador de mensagem - ' ' ou " "
-toda função em Python é delimitada por ( )
-print('Olá, Mundo!')
+    Delimitador de mensagem - ' ' ou " "
+        toda função em Python é delimitada por ( )
+        print('Olá, Mundo!')
 
-Números não precisa usar aspas
-print(7 + 4) => irá imprime 11
+    Números não precisa usar aspas
+        print(7 + 4) => irá imprimir 11
 
-Concatenação (+ ou ,)
-print('7' + '4') =>  imprime 74
+    Concatenação (+ ou ,)
+        print('7' + '4') =>  imprime 74
 
-print('Olá' + 5) => error
+        print('Olá' + 5) => error
 
-print('Olá', 5) => imprime Olá 5
+        print('Olá', 5) => imprime Olá 5
 
-Variáveis - toda variável é um objeto em Python
+    Variáveis - toda variável é um objeto em Python
 
-nome = 'Guanabara'
-idade = 25
-peso = 75.8
+        nome = 'Guanabara'
+        idade = 25
+        peso = 75.8
 
-print(nome, idade, peso) //Não pode ser com +
+        print(nome, idade, peso) //Não pode ser com +
 
-Função input
-nome = input('Qual é seu nome?')
-idade = input('Quantos anos você tem?')
-peso = input('Quanto você pesa?')
-print(nome, idade, peso)
+    Função input
 
+        nome = input('Qual é seu nome?')
+        idade = input('Quantos anos você tem?')
+        peso = input('Quanto você pesa?')
+        print(nome, idade, peso)
+
+    Scripts em Python (desafios 1 ao 3)
+        Cria-se uma pasta na IDLE e escreve o script
+        Salva o arquivo - irá salvar no formato .py
+        Para executar na pasta do scrypt => Run - Run Module
 
 3) Instalando o Pycharm e o QPython3
 
-IDE - Ambiente de desenvolvimento integrado
-IDE Pycharm
+    IDE - Ambiente de desenvolvimento integrado (Integrated Development Environment)
+    IDE Pycharm
 
-www.jetbrains.com
-baixar Pycharm Community
+    www.jetbrains.com
+    baixar Pycharm Community
+    Android tem o aplicativo QPython3
 
 4) Tipos primitivos e saída de dados
 	
