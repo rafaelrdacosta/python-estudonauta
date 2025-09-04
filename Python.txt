@@ -54,36 +54,35 @@
 
 4) Tipos primitivos e saída de dados
 	
-int -> números inteiros
-float -> reais ou ponto flutuante
-bool -> True ou False
-str -> string
+    int -> números inteiros
+    float -> reais ou ponto flutuante
+    bool -> True ou False
+    str -> string
 
-nome = input('Digite o seu nome: ')
-print('É um prazer te conhecer, {}!'.format(nome))
+    nome = input('Digite o seu nome: ')
+    print('É um prazer te conhecer, {}!'.format(nome))
 
-print(type(nome)) 
-saída -> <class 'str'>
+    print(type(nome))
+    saída -> <class 'str'>
 
-print(f'A soma entre {num1} e {num2} vale {s}.')
-print('A soma entre {} e {} vale {}.'.format(num1, num2, s))
+    print(f'A soma entre {num1} e {num2} vale {s}.')
+    print('A soma entre {} e {} vale {}.'.format(num1, num2, s))
 
-Teste de tipo
+    Métodos de Teste de tipo
 
-a = input('Digite algo: ')
-print(a.isnumeric())  -> numérico
-saída -> True or False
+    a = input('Digite algo: ')
+    print(a.isnumeric())  -> numérico
+    saída -> True or False
 
-b = input('Digite algo: ')
-print(b.isalpha())  -> alphabético
-saída -> True or False
+    b = input('Digite algo: ')
+    print(b.isalpha())  -> alphabético
+    saída -> True or False
 
-c = input('Digite algo: ')
-print(c.isalnum()) -> alfanumérico
-saída -> True or False
+    c = input('Digite algo: ')
+    print(c.isalnum()) -> alfanumérico
+    saída -> True or False
 
-isupper, islower, isdigit, isspace, istitle
-
+    isupper, islower, isdigit, isspace, istitle(capitalizada)...
 
 5) Operadores aritméticos
 
