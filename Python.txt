@@ -86,57 +86,57 @@
 
 5) Operadores aritméticos
 
-+ adição
-- subtração
-* multiplicação
-/ divisão 
-** potência  ----------> função pow(x,y) == x**y
-// divisão inteira
-% resto da divisão ou módulo
+    + adição
+    - subtração
+    * multiplicação
+    / divisão
+    ** potência  ----------> função pow(x,y) == x**y
+    // divisão inteira
+    % resto da divisão ou módulo
 
 
-Ordem de precedência
+    Ordem de precedência
 
-1 -> parênteses
-2 -> **
-3 -> *  /  //  %
-4 -> +  -
+    1 -> parênteses
+    2 -> **
+    3 -> *  /  //  %
+    4 -> +  -
 
-Raiz quadrada 
-25**(1/2) == 5
-raiz = math.sqrt(25) == 5
+    Raiz quadrada
+    25**(1/2) == 5
+    raiz = math.sqrt(25) == 5
 
-Raiz cúbica
-127**(1/3)  == 5.026525...
+    Raiz cúbica
+    127**(1/3)  == 5.026525...
 
-'Oi' * 5 -> OiOiOiOiOi
-'=' * 7 -> =======
+    'Oi' * 5 -> OiOiOiOiOi
+    '=' * 7 -> =======
 
-Uso do print
+    Uso do print
 
-nome = Rafael
-print('Prazer em te conhecer {:20}!'.format(nome))
-Prazer em te conhecer Rafael              !        ----> vai ocupar vinte espaços alinhados à esquerda
+    nome = Rafael
+    print('Prazer em te conhecer {:20}!'.format(nome))
+    Prazer em te conhecer Rafael              !        ----> vai ocupar vinte espaços alinhados à esquerda
 
-print('Prazer em te conhecer {:>20}!'.format(nome))
-Prazer em te conhecer               Rafael!       -----> alinhamento à direita
+    print('Prazer em te conhecer {:>20}!'.format(nome))
+    Prazer em te conhecer               Rafael!       -----> alinhamento à direita
 
-print('Prazer em te conhecer {:<20}!'.format(nome))
-Prazer em te conhecer Rafael              !        ----> alinhamento à esquerda
+    print('Prazer em te conhecer {:<20}!'.format(nome))
+    Prazer em te conhecer Rafael              !        ----> alinhamento à esquerda
 
-print('Prazer em te conhecer {:^20}!'.format(nome))
-Prazer em te conhecer        Rafael       !        ----> centralizado
+    print('Prazer em te conhecer {:^20}!'.format(nome))
+    Prazer em te conhecer        Rafael       !        ----> centralizado
 
-print('Prazer em te conhecer {:=^20}!'.format(nome))
-Prazer em te conhecer =======Rafael=======!        ----> centralizado com o caracter
+    print('Prazer em te conhecer {:=^20}!'.format(nome))
+    Prazer em te conhecer =======Rafael=======!        ----> centralizado com o caracter
 
-print('A soma vale {}'.format(n1+n2))
-print('A soma é {}, o produto é {} e a divisão é {:.2f}.'.format(s, m, d))
+    print('A soma vale {}'.format(n1+n2))
+    print('A soma é {}, o produto é {} e a divisão é {:.2f}.'.format(s, m, d))
 
-print('A soma é {}, o produto é {} e a divisão é {:.2f}.'.format(s, m,d), end=' ')  ---> end no final não quebra linha
-print('A divisão inteira é {} e a potência é {}.'.format(di, e))
+    print('A soma é {}, o produto é {} e a divisão é {:.2f}.'.format(s, m,d), end=' ')  ---> end no final não quebra linha
+    print('A divisão inteira é {} e a potência é {}.'.format(di, e))
 
-\n é a quebra de linha
+    \n é a quebra de linha
 
 
 6) Utilizando módulos
