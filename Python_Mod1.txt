@@ -141,89 +141,105 @@
 
 6) Utilizando módulos
 
-Comando para importar bibliotecas --> import "nome biblioteca"
-Ex: import math --> importa a biblioteca com todas as funcionalidades de matemática
-	ceil - arrendondamento para cima
-	floor - arrendondamento para baixo
-	trunc - retira os dígitos da vírgula para frente
-	pow - calcular um número elevado a sua potência
-	sqrt - raiz quadrada
-	factorial - cálculo fatorial
-aplicação --> math.ceil()
+    Comando para importar bibliotecas --> import "nome biblioteca"
+    Ex: import math --> importa a biblioteca com todas as funcionalidades de matemática
+        ceil - arrendondamento para cima
+        floor - arrendondamento para baixo
+        trunc - retira os dígitos da vírgula para frente
+        pow - calcular um número elevado a sua potência
+        sqrt - raiz quadrada (square root)
+        factorial - cálculo fatorial
+    aplicação --> math.ceil()
 
-Comando para importar parte da biblioteca --> from "biblioteca" import "função"
-Ex: from math import sqrt
-    from math import sqrt, ceil	
-aplicação --> sqrt()
+    Comando para importar parte da biblioteca --> from "biblioteca" import "função"
+    Ex: from math import sqrt
+        from math import sqrt, ceil
+    aplicação --> sqrt()
 
-Bibliotecas externas PyPI - python.org
-import emoji
-clica em cima e quando aparecer a lâmpada vermelha, clica em cima, e escolhe install package emoji
-no pycharm --> settings, pasta do projeto, python interpreter, e clicar no +
+    Como verificar as Bibliotecas disponíveis - python.org
+    docs.python.org/3
+    Escolhe a versão do Python (terminal - python --version)
+    Lybrary reference
 
-import pygame --> tocar MP3
+    Ou pode importar bibliotecas externas no PyPI - python.org
+    import emoji
+    clica em cima e quando aparecer a lâmpada vermelha, clica em cima, e escolhe install package emoji
+    para instalar/desinstalar pelo pycharm --> settings, pasta do projeto, python interpreter, e clicar no +
 
-6) Manipulando textos
+    import pygame --> tocar MP3
 
-- Cadeia de caracteres ou strings
-- Ex: frase = 'Curso em Vídeo Python'
+7) Manipulando textos
 
-- Técnica de fatiamento
-frase[9] == V
-frase[9:14] == Video
-frase[9:21] == Video Python	
-frase[9:21:2] == Vdo Pto
-frase[:5] == Curso
-frase[15:] == Python
-frase[9::3] == VePh --> até o final pulando de três em três
+    - Cadeia de caracteres ou strings
+        Ex: frase = 'Curso em Vídeo Python'
 
-- Análise
-len(frase) == 21 --> comprimento da frase
-frase.count('o') == 3 --> quantos 'o' tem na frase
-frase.count('o', 0, 13) == 2 --> quantos 'o' tem até o caractere 13, excele ele
-frase.find('deo') == 11 --> a string 'deo' começou no caractere 11
-frase.find('Android') == -1 --> significa que não existe esta string em frase
-'Curso' in frase == True   --> existe a string Curso em frase
+    - Técnica de fatiamento
+        frase[9] == V
+        frase[9:14] == Video #exclui a última posição
+        frase[9:21] == Video Python
+        frase[9:21:2] == Vdo Pto
+        frase[:5] == Curso
+        frase[15:] == Python
+        frase[9::3] == VePh --> até o final pulando de três em três
 
-- Transformação
-frase.replace('Python', 'Android') == Curso em Vídeo Android
-frase.upper() == CURSO EM VÍDEO PYTHON
-frase.lower() ==  curso em vídeo python
-frase.capitalize() == Curso em vídeo python  --> somente a primeira letra maiúscula
-frase.title() == Curso Em Vídeo Python --> maiúscula todos as primeiras letras das palavras
+    - Análise
+        len(frase) == 21 --> comprimento da frase
+        frase.count('o') == 3 --> quantos 'o' tem na frase
+        frase.count('o', 0, 13) == 1 --> quantos 'o' tem até o caractere 13, exceto ele
+        frase.find('deo') == 11 --> a string 'deo' começou no caractere 11
+        frase.rfind('o') == 19 --> procura do final para o início (reverse find)
+        frase.find('Android') == -1 --> significa que não existe esta string em frase
+        'Curso' in frase == True   --> existe a string Curso em frase
 
-frase = '   Aprenda Python  '  --> caracteres vazios no início e fim da string
+    - Transformação
+        frase.replace('Python', 'Android') == Curso em Vídeo Android
+        frase.upper() == CURSO EM VÍDEO PYTHON
+        frase.lower() ==  curso em vídeo python
+        frase.capitalize() == Curso em vídeo python  --> somente a primeira letra maiúscula
+        frase.title() == Curso Em Vídeo Python --> maiúscula todos as primeiras letras das palavras
 
-frase.strip() == 'Aprenda Python' --> remove espaços vazios no início e no fim
-frase.rstrip() == '   Aprenda Python' --> remove espaços no final
-frase.lstrip() == 'Aprenda Python  ' --> remove espaços do início
+        frase = '   Aprenda Python  '  --> caracteres vazios no início e fim da string
 
-- Divisão
-frase = 'Curso em Vídeo Python'
-frase.split() == ['Curso', 'em', 'Vídeo', 'Python'] --> gera uma lista 
+        frase.strip() == 'Aprenda Python' --> remove espaços vazios no início e no fim
+        frase.rstrip() == '   Aprenda Python' --> remove espaços no final
+        frase.lstrip() == 'Aprenda Python  ' --> remove espaços do início
+
+    - Divisão
+        frase = 'Curso em Vídeo Python'
+        frase.split() == ['Curso', 'em', 'Vídeo', 'Python'] --> gera uma lista
 
 
-- Junção
+    - Junção
 
-'-'.join(frase) == Curso-em-Vídeo-Python
+        '-'.join(frase) == Curso-em-Vídeo-Python
 
-- Texto longo em mais de uma linha usar o print com """ no início e fim """.
+    - Texto longo em mais de uma linha usar o print com """ no início e fim """.
 
-7) Condições
+8) Condições
 
-if <condição>:
-	bloco True
-else:
-	bloco False
+    if <condição>:
+        bloco True
+    else:
+        bloco False
 
-Condição simplificada
-print('bloco True' if <condição> True else 'bloco false')
+    Condição simplificada
+    print('bloco True' if <condição> else 'bloco false')
 
-8) Cores no terminal
+9) Cores no terminal
 
-ANSI - escape sequence
-Representação de cores - \033C[<código da cor>m
-código da cor = style;text;back
+    ANSI - escape sequence
+    Representação de cores - \033C[<código da cor>m
+    código da cor = style;text;back
+
+    style
+        0 - sem estilo
+        1 - bold
+        4 - underline
+        7 - inverte text e back
+    text
+        cores - 30 a 37 (branco, vermelho, verde, amarelo, azul, roxo, ciano, cinza)
+    back
+        cores - 40 a 47 => as mesmas cores
 
 
 
