@@ -1,0 +1,9 @@
+Módulo 2 - Estruturas de controle
+
+1) Condições Aninhadas
+    if <condição>:
+        bloco de instrução
+    elif <condição>:
+        bloco de instrução
+    else:
+        bloco instrução
