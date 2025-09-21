@@ -1,0 +1,78 @@
+Exerício 001 - Crie um programa que escreva "Olá, Mundo!" na tela
+
+Exercício 002 - Faça um programa que leia o nome de uma pessoa e mostre
+uma mensagem de boas vindas.
+
+Exercício Python #003 - Crie um programa que leia dois
+números e mostre a soma entre eles.
+
+Exercício 004 - Faça um programa que leia algo pelo teclado
+e mostre na tela o seu tipo primitivo e todas as informações
+possíveis sobrer ele.
+
+
+
+
+
+
+
+
+Exercício 038 - Escreva um programa que leia dois números
+inteiros e compare-os, mostrando na tela uma mensagem:
+- O primeiro valor é maior.
+- O segundo valor é maior.
+- Não existe valor maior, os dois são iguais.
+
+Exercício 039 - Faça um programa que leia o ano de nascimento
+de um jovem e informe, de acordo com a sua idade:
+- Se ele ainda vai se alistar ao serviço militar.
+- Se é a hora de se alistar.
+- Se já passou do tempo do alistamento.
+
+Seu programa também deverá mostrar o tempo que falta ou que
+passou do prazo.
+
+Exercício 040 - Crie um programa que leia duas notas de
+um aluno e calcule sua média, mostrando uma mensagem
+no final, de acordo com a média atingida:
+- Média abaixo de 5.0: Reprovado
+- Média entre 5.0 e 6.9: Recuperação
+- Média 7.0 ou superior: Aprovado
+
+Exercício 041 - A confederação Nacional de Natação
+precisa de um programa que leia o ano de nascimento
+de um atleta e mostre sua categoria, de acordo com
+a idade:
+- até 9 anos: Mirim
+- até 14 anos: Infantil
+- até 19 anos: Júnior
+- até 20 anos: Sênior
+- acima: master
+
+Exercício 042 - refaça o desafio 035 dos triângulos,
+acrescentando o recurso de mostrar que tipo de triângulo
+será formado.
+- Equilátero: todos os lados iguais
+- Isósceles: dois lados iguais
+- Escaleno: todos os lados diferentes.
+
+Exercício 043 - Desenvolva uma lógica que leia o peso
+e a altura de uma pessoa, calcule seu IMC e mostre seu
+status, de acordo com a tabela abaixo:
+Menor que 18,5: Abaixo do peso
+Entre 18,5 e 24,9: Peso ideal
+Entre 25 e 29,9: Sobrepeso
+Entre 30 e 34,9: Obesidade grau I
+Entre 35 e 39,9: Obesidade grau II
+Maior que 40: Obesidade grau III
+
+Exercício 044 - Elabore um programa que calcule o valor
+a ser pago por um produto, considerando o seu preço normal
+e condição de pagamento:
+- à vista dinheiro/cheque:  10% de desconto
+- à vista no cartão: 5% de desconto
+- em até 2x no cartão: preço normal
+- 3x ou mais no cartão: 20% de juros
+
+Exercício 045 - Crie um programa que faça o computador jogar
+Jokenpô com você (pedra, papel e tesoura).
