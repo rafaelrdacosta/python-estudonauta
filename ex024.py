@@ -1,5 +1,5 @@
 '''
-Exercício 022 - Crie um programa que leia o nome
+Exercício 024 - Crie um programa que leia o nome
 de uma cidade e diga se ela começa ou não como
 o nome 'SANTO'.
 '''

@@ -7,3 +7,8 @@ Módulo 2 - Estruturas de controle
         bloco de instrução
     else:
         bloco instrução
+
+2) Estruturas de repetição for
+    #contador - variável criada para iteração de 1 a 10
+    for contador in range(1, 10):
+        bloco instrução

@@ -9,16 +9,18 @@ ela não pode exceder 30% do salário ou então o
 empréstimo será negado.
 '''
 
-valor = float(input('Qual valor da casa? R$'))
-salario = float(input('Qual é o seu salário? R$'))
+valor = float(input('\nQual valor da casa? R$ '))
+salario = float(input('Qual é o seu salário? R$ '))
 anos = int(input('Quer financiar em quantos anos? '))
 
 prestacao = valor / (anos*12)
 max = salario * 0.3
 
+print('Para pagar uma casa de R$ {:.2f} em {} anos a prestação será de R${:.2f}.'.format(valor, anos, prestacao))
+
 if prestacao > max:
-    print('A prestação de R${:.2f} excede o limite de 30% de seu salário.\nO financiamento não será liberado!'.format(prestacao))
+    print('O financiamento não será liberado!')
 else:
-    print('Financiamento liberado em {} anos com parcelas no valor de R${:.2f}'.format(anos, prestacao))
+    print('Financiamento liberado!')
 
 
