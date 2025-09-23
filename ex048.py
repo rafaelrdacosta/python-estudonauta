@@ -4,8 +4,9 @@ Exercício 048 - Faça um programa que calcule a soma entre todos os números
 '''
 
 soma = 0
-for c in range(0, 500, 3):
-    if c % 2 == 1:
-        #print(c, end=' ')
+cont = 0
+for c in range(3, 500, 2):
+    if c % 3 == 0:
         soma += c
-print('\nA soma dos números ímpares múltiplos de três entre 1 e 500 é: {}'.format(soma))
+        cont += 1
+print('\nA soma de todos os {} números ímpares múltiplos de três entre 1 e 500 é: {}'.format(cont, soma))

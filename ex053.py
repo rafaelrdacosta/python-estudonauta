@@ -9,17 +9,20 @@ o lobo ama o bolo
 anotaram a data da maratona
 '''
 
-string = str(input('Digite um string: ')).strip().split()
+string = str(input('Digite um string: ')).strip().upper()
 
-string1 = ''.join(string)
-string2 = ''
-for c in range(len(string1) - 1, -1, -1):
-   string2[c] = string1[c]
+#Split cria uma lista de palavras e com join irá juntar sem espaços
+string_sem_espacos = ''.join(string.split())
 
-if string2 == string1:
-    print('A string é um políndromo.')
+string_invertida = string_sem_espacos[::-1]
+'''string_invertida = ''
+for letra in range(len(string_sem_espacos) - 1, -1, -1):
+    string_invertida += string_sem_espacos[letra]'''
+
+print('O inverso de {} é {}'.format(string_sem_espacos, string_invertida))
+if string_sem_espacos == string_invertida:
+    print('A string é um palíndromo.')
 else:
-    print('A string não é um políndromo.')
-
+    print('A string não é um palíndromo.')
 
 

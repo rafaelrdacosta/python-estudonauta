@@ -245,3 +245,26 @@ dessa progressão.
 
 Exercício 052 - Faça um programa que leia um número inteiro
 e diga se ele é ou não um número primo.
+
+Exercício 053 - Crie um programa que leia uma frase qualquer e diga
+se ela é um palíndromo, desconsiderando os espaços.
+Exemplos:
+apos a sopa
+a sacada da casa
+a torre da derrota
+o lobo ama o bolo
+anotaram a data da maratona
+
+Exercício 054 - Crie um programa que leia o ano de
+nascimento de sete pessoas. No final, mostre quantas
+pessoas ainda não atingiram a maioridade e quantas
+já são maiores.
+
+Exercício 55 - Faça um programa que leia o peso de cinco pessoas.
+No final, mostre qual foi maior e o menor peso lidos.
+
+Exercício 56 - Desenvolva um programa que leia o nome, idade e sexo de 4 pessoas.
+No final mostre:
+- A média de idade do grupo.
+- Qual o nome do homem mais velho.
+- Quantas mulheres têm menos de 20 anos.
