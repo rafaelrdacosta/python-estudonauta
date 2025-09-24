@@ -6,6 +6,7 @@ No final mostre:
 - Quantas mulheres têm menos de 20 anos.
 '''
 soma_idade = 0
+media_idade = 0
 contador = 0
 nome_homem_mais_velho = ''
 idade_homem_mais_velho = 0
@@ -14,14 +15,16 @@ for c in range(0, 4):
     print('Dados {}º pessoa'.format(c + 1))
     nome = str(input('Nome: ')).strip()
     idade = int(input('Idade: '))
-    sexo = str(input('Sexo [M/F]: ')).upper()
+    sexo = str(input('Sexo [M/F]: ')).strip()
 
     soma_idade += idade
 
-    if sexo == 'M':
-        if idade > idade_homem_mais_velho:
-            idade_homem_mais_velho = idade
-            nome_homem_mais_velho = nome
+    if c == 1 and sexo in 'Mm':
+        idade_homem_mais_velho = idade
+        nome_homem_mais_velho = nome
+    if sexo in 'Mm' and idade > idade_homem_mais_velho:
+        idade_homem_mais_velho = idade
+        nome_homem_mais_velho = nome
     if sexo == 'F':
         if idade < 20:
             contador += 1
@@ -36,4 +39,4 @@ if nome_homem_mais_velho:
 else:
     print('Nenhum homem foi cadastrado.')
 
-print(f'{contador} mulheres têm menos de 20 anos.')
+print(f'Ao todo {contador} mulhere(s) têm menos de 20 anos.')
