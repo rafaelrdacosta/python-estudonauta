@@ -10,20 +10,23 @@ from time import sleep
 
 num = randint(0, 10)
 print('-='*30)
-print('Vou pensar em um número entre 0 e 5. Tente advinhar...')
+print('Vou pensar em um número entre 0 e 10. Tente advinhar...')
 print('-='*30)
 
+acertou = False
 palpite = 0
-while True:
+while not acertou:
     chute = int(input('Em que número eu pensei? '))
     palpite += 1
     print('PROCESSANDO...')
     sleep(1)
 
-    if chute == num:
-        print('Parabéns!! Você conseguiu vencer!')
-        break
+    if chute > num:
+        print('Menos... Tente mais uma vez!')
+    elif chute < num:
+        print('Mais... Tente mais uma vez!')
     else:
-        print('GANHEI! Tente novamente!')
+        print('Parabéns!! Você conseguiu vencer!')
+        acertou = True
 
 print('Foram {} tentativa(s) até acertar!'.format(palpite))
