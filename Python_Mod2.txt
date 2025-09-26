@@ -36,3 +36,5 @@ Módulo 2 - Estruturas de controle
     while resposta == 'S':
         n = int(input('Digite um valor: '))
         resposta = str(input('Quer continuar? [S/N] ')).upper()
+
+4) Interrompendo repetições while

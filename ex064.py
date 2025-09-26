@@ -14,6 +14,7 @@ while True:
     if n != 999:
         soma += n
     else:
-        break
+       print('Saindo...')
+       break
 print('A soma dos {} números digitados é igual a {}.'.format(contador, soma))
 

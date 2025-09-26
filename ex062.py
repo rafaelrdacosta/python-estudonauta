@@ -5,7 +5,6 @@ O programa encerra quando ele disser que quer mostrar 0
 termos.
 '''
 
-
 t = int(input('\nDigite o 1º termo da Progressão Aritmética: '))
 r = int(input('Digite a razão da PA: '))
 
@@ -25,9 +24,16 @@ while termos_exibidos < total_termos:
     termos_exibidos += 1
 
     if termos_exibidos == total_termos:
-        print('FIM')
+        print('PAUSA')
         mais_termos = int(input('\nVocê deseja mostrar mais quantos termos? [0 para sair]: '))
         if mais_termos > 0:
             total_termos += mais_termos
+        elif mais_termos < 0:
+            print('Valor inválido!')
+            mais_termos = int(input('\nVocê deseja mostrar mais quantos termos? [0 para sair]: '))
+            total_termos += mais_termos
         else:
-            break
+            print('A progressão foi finalizada com total de {} termos.'.format(termos_exibidos))
+print('FIM')
+
+

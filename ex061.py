@@ -16,6 +16,7 @@ print('Razão: {}'.format(r))
 
 c = 1
 while c < 11:
-    print(t, end=' ')
+    print(t, end=' -> ')
     t += r
     c += 1
+print('FIM')
