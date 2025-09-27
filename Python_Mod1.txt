@@ -143,6 +143,10 @@ Módulo 1 - Fundamentos
 
     \n é a quebra de linha
 
+    Função fstring
+    print(f'A soma vale {soma}')
+    print(f'O {nome} tem {idade} anos.')
+    print(f'O {nome:^20} ganha R${salario:.2f}')
 
 6) Utilizando módulos
 

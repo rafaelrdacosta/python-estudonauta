@@ -37,8 +37,12 @@ Módulo 2 - Estruturas de controle
         n = int(input('Digite um valor: '))
         resposta = str(input('Quer continuar? [S/N] ')).upper()
 
-<<<<<<< Updated upstream
 4) Interrompendo repetições while
-=======
-       
->>>>>>> Stashed changes
+    while True:             #laço infinito
+        if <condição>
+            bloco instrução
+        elif <condição>
+            bloco instrução
+            break            #interrompe o laço while
+    print('fim')
+
