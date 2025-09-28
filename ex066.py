@@ -7,13 +7,12 @@ No final mostre quantos números foram digitados e qual
 foi a soma entre eles desconsiderando o 999.
 '''
 
-contador = 0
-soma = 0
+soma = contador = 0
 while True:
     num = int(input('\nDigite um valor (999 para parar): '))
-    if num == 999:
+    if num == 999: #antes de realizar a contagem e soma pois 999 é uma flag
         break
     contador += 1
     soma += num
 
-print(f'A soma dos três {contador} valores foi {soma}!')
+print(f'A soma dos {contador} valores foi {soma}!')

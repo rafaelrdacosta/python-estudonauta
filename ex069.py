@@ -16,19 +16,18 @@ while True:
 
     idade = int(input('Idade: '))
 
-    sexo = '-'
+    sexo = ' '
     while sexo not in 'MF':
         sexo = str(input('Sexo: [M/F] ')).strip().upper()[0]
     print('-' * 30)
 
-    if idade > 18:
+    if idade >= 18:
         maior_idade += 1
 
     if sexo == 'M':
         total_homem += 1
-    elif sexo == 'F':
-        if idade < 20:
-            menos_vinte += 1
+    elif sexo == 'F' and idade < 20:
+        menos_vinte += 1
 
     opcao = ' '
     while opcao not in 'SN':
@@ -38,9 +37,8 @@ while True:
     if opcao == 'N':
         break
 
-
 print('{:=^30}'.format(' FIM DO PROGRAMA '))
 print(f'Total de pessoas com mais de 18 anos: {maior_idade}')
-print(f'Ao todo temos {total_homem} homen(s) cadastrados.')
+print(f'Ao todo tem(os) {total_homem} homen(s) cadastrado(s).')
 print(f'E temos {menos_vinte} mulher(es) com menos de 20 anos.')
 

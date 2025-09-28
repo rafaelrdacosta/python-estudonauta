@@ -12,7 +12,7 @@ print('-' * 30)
 print('{:^30}'.format('LOJA SUPER BARATÃO'))
 print('-' * 30)
 
-total = maior_mil = mais_barato = contador =  0
+total = maior_mil = mais_barato = contador = 0
 while True:
     nome = str(input('Nome do Produto: ')).strip()
     preco = float(input('Preço: R$ '))
@@ -23,10 +23,7 @@ while True:
     if preco > 1000:
         maior_mil += 1
 
-    if contador == 1:
-        mais_barato = preco
-        nome_mais_barato = nome
-    elif preco < mais_barato:
+    if contador == 1 or preco < mais_barato:
         mais_barato = preco
         nome_mais_barato = nome
 
@@ -39,5 +36,5 @@ while True:
 
 print('{:-^30}'.format(' FIM DO PROGRAMA '))
 print(f'O total da compra foi R${total:.2f}.')
-print(f'Temos {maior_mil} produto(s) custando mais de R$ 1000.00.')
+print(f'Tem(os) {maior_mil} produto(s) custando mais de R$ 1000.00.')
 print(f'O produto mais barato foi a(o) {nome_mais_barato} que custou R${mais_barato:.2f}.')

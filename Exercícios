@@ -1,10 +1,10 @@
 Exerício 001 - Crie um programa que escreva "Olá, Mundo!" na tela
 
-Exercício 002 - Faça um programa que leia o nome de uma pessoa e mostre
-uma mensagem de boas vindas.
+Exercício 002 - Faça um programa que leia o nome de uma pessoa e mostre uma
+mensagem de boas vindas.
 
-Exercício Python #003 - Crie um programa que leia dois
-números e mostre a soma entre eles.
+Exercício Python #003 - Crie um programa que leia dois números e mostre a soma
+entre eles.
 
 Exercício 004 - Faça um programa que leia algo pelo teclado
 e mostre na tela o seu tipo primitivo e todas as informações
@@ -360,3 +360,35 @@ informar quantas cédulas de cada valor serão
 entregues.
 Obs: Considere que o caixa possui cédulas de
 R$50, R$20, R$10 e R$1.
+
+Exercício 072 - Crie um programa que tenha uma
+tupla totalmente preenchida com uma contagem
+por extenso, de zero até vinte.
+Seu programa deverá ler um número pelo teclado
+(entre 0 e 20) e mostrá-lo por extenso.
+
+Exercício 073 - Crie uma tupla preenchida com os 20
+primeiros colocados da Tabela do Campeonato Brasileiro
+de Futebol, na ordem de colocação. Depois mostre:
+a - apenas os cinco primeiro colocados.
+b - Os últimos 4 colocados.
+c - uma lista com os times em ordem alfabética.
+d - em que posição está o time da Chapecoense.
+
+Exercício 074 - Crie um programa que vai gerar cinco
+números aleatórios e colocar em uma tupla.
+Depois disso, mostre a listagem de números gerados
+e também indique o menor e o maior valor que estão
+na tupla.
+
+Exercício 075 - Desenvolva um programa que leia
+quatro valores pelo teclado e guarde-os em uma
+tupla. No final mostre:
+a - Quantas vezes apareceu o valor 9.
+b - Em que posição foi digitado o primeiro valor 3.
+c - Quais foram os números pares.
+
+Exercício 076 - Crie um programa que tenha um tupla única
+com nomes de produtos e seus respectivos preços, na sequência.
+No final, mostre uma listagem de preços, organizando os dados
+de forma tabular.

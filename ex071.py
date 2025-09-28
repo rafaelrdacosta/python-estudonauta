@@ -14,42 +14,26 @@ print('='*35)
 print('{:^35}'.format('BANCO CEV'))
 print('='*35)
 
+saque = int(input('Que valor você quer sacar? R$ '))
+total = saque
+cedula = 50
+total_ced = 0
 while True:
-    saque = int(input('Que valor você quer sacar? R$ '))
-
-    if saque < 10:
-        qtd_um = saque
-        print(f'Total de {qtd} cédulas de R$ 1.00')
-    elif saque < 20:
-        qtd_dez = saque // 10
-        print(f'Total de {qtd_dez} cédula(s) de R$ 10.00')
-        if saque % 10 != 0:
-            qtd_um = saque % 10
-            print(f'Total de {qtd_um} cédula(s) de R$ 1.00')
-    elif saque < 50:
-        if saque % 20 != 0:
-            qtd_vinte = saque // 20
-            print(f'Total de {qtd_vinte} cédula(s) de R$ 20.00')
-        if saque % 10 != 0:
-            qtd_um = saque % 10
-            print(f'Total de {qtd_um} cédula(s) de R$ 1.00')
+    if total >= cedula:
+        total -= cedula
+        total_ced += 1
     else:
-        qtd_cinquenta = saque // 50
-        print(f'Total de {qtd_cinquenta} cédula(s) de R$ 50.00')
-        if saque % 50 != 0:
-            resto = saque % 50
-            if resto % 20 == 0:
-                qtd_vinte = resto // 20
-                print(f'Total de {qtd_vinte} cédula(s) de R$ 20.00')
-            else:
-                qtd_vinte = resto // 20
-                print(f'Total de {qtd_vinte} cédula(s) de R$ 20.00')
-                qtd_dez = resto // 20
-                print(f'Total de {qtd_dez} cédula(s) de R$ 10.00')
+        if total_ced > 0:
+            print(f'Total de {total_ced} cédula(s) de R${cedula}')
+        if cedula == 50:
+            cedula = 20
+        elif cedula == 20:
+            cedula = 10
+        elif cedula == 10:
+            cedula = 1
+        total_ced = 0
+        if total == 0:
+            break
 
-        if saque % 10 != 0:
-                qtd_um = saque % 10
-                print(f'Total de {qtd_um} cédula(s) de R$ 1.00')
-    print('=' * 35)
-    break
+print('=' * 35)
 print('Volte sempre ao BANCO CEV! Tenha um bom dia!')
