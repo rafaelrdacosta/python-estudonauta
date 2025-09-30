@@ -4,7 +4,7 @@ Tuplas -> ()
 Listas -> []
 Dicionários -> {}
 
-1) Tuplas
+1) Tuplas()
     - É um quantidade de valores separados por vírgula.
     - Elas podem ser com ou sem parênteses, embora frenquentemente os parênteses sejam necessários.
     - Não é possível atribuir valores a itens individuais.
@@ -72,12 +72,70 @@ por seus índices.
     print(f'\nO maior valor sorteado foi {max(numeros)}.')
     print(f'O menor valor sorteado foi {min(numeros}.')
 
+2) Listas[]
+    - Pode ser escrita como uma lista de valores separados por vírgula entre colchetes.
+    - Pode conter itens de tipos diferentes.
+    - Podem ser mutáveis.
+
+    lanche = ['hamburguer', 'suco', 'pizza', 'pudim']
+
+    lanche[3] = 'picole'                                                              #mutável
+    lanche = ['hamburguer', 'suco', 'pizza', 'picole']
+
+    lanche.append('cookie')                                                           #adciona no final
+    lanche = ['hamburguer', 'suco', 'pizza', 'picole', 'cookie']
+
+    lanche.insert(0, 'cachorrro-quente')                                              #adciona na posição de índice zero
+    lanche = ['cachorrro-quente', 'hamburguer', 'suco', 'pizza', 'picole', 'cookie']
+
+    del lanche[3] or lanche.pop[3] or lanche.remove('pizza')                          #normalmente utilizado para elininar o último Elm
+    lanche = ['cachorrro-quente', 'hamburguer', 'suco', 'picole', 'cookie']           #deletou pizza
+
+    lanche.pop()                                                                      #deleta o último Elm
+    lanche = ['cachorrro-quente', 'hamburguer', 'suco', 'picole']
+
+    Para garantir que o item está na lista:
+        if 'pizza' in lanche:
+            lanche.remove('pizza')
+
+    Criar uma lista com a função list com um range
+        valores = list(range(4, 11))                    #vai criar uma lista chamada valores
+
+    valores.sort()                                      #ordena os valores
+    valores.sort(reverse=True)                          #ordena na ordem inversa
+
+    len(valores)                                        #retorna a qtd de Elm
 
 
+    lista = []
+    lista.append(5)
+    lista.append(9)
+    lista.append(4)
+    for item in lista:
+        print(f'{item}...', end='')
 
+    for indice, item in enumerate(lista):
+        if indice == 0:
+            print('\n')
+        print(f'Na posição {indice} econtrei o valor {item}!')
 
+    for i in range(0, 5):
+        lista.append(int(input('Digite um valor: ')))
+    print(lista)
 
+    a = [2, 3, 4, 7]
+    b = a
 
+    print(f'Lista A: {a}')
+    print(f'Lista B: {b}')
+    b[2] = 8 #vai atribuir as duas listas
+    print(f'\nLista A: {a}')
+    print(f'Lista B: {b}')
+
+    b = a[:] #copia todos valores de a e atribui a b
+    b[2] = 9
+    print(f'\nLista A: {a}')
+    print(f'Lista B: {b}')
 
 
 
