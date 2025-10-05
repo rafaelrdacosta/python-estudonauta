@@ -165,7 +165,7 @@ por seus índices.
         ['João', 32]
 
         for p in pessoas:
-            print(f'{p[0]} ten {p[1]} anos de idade.')
+            print(f'{p[0]} tem {p[1]} anos de idade.')
 
         alunos = list()
         dados = list()
