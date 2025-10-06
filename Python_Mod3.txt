@@ -186,8 +186,46 @@ por seus índices.
                 totmen += 1
         print(f'Temos {totmai} maiores e {totmen} menores de idade.')
 
+4) Dicionários
+   => dicionarios {}
+    dados = dict()
+    dados = {}
+    dados = {'nome': 'Pedro', 'idade':25}
+    print(dados['nome'])                  #saída: Pedro
+    print(dados['idade'])                 #saída: 25
+
+    dados['sexo'] = 'M'
+    dados = {'nome': 'Pedro', 'idade':25, 'sexo': 'M'}
+
+    del dados['idade']
+    dados = {'nome': 'Pedro', 'sexo': 'M'}
+
+    print(dados.values())                #saída(VALORES): dict_values(['Pedro', 'M'])
+    print(dados.keys())                  #saída(KEYS): dict_keys(['nome', 'sexo'])
+    print(dados.items())                 #saída(VALORES E KEYS): dict_items([('nome', 'Pedro'), ('sexo', 'M')])
+
+    for k, v in dados.items():
+        print(f'O {k} é {v}')
+
+    Pode ser criado uma lista de dicionários.
+    locadora = [ {'título':'Star Wars', 'ano': 1977, 'diretor': 'George Lucas'},
+                {'título':'Avengers', 'ano': 2012, 'diretor': 'Joss Whedon'},
+                {'título':'Matrix', 'ano': 1999, 'diretor': 'Wachowski'}]
+    print(locadora[0]['ano'])             #saída: 1977
+    print(locadora[2]['título'])          #saída: Matrix
 
 
+    estado = dict()
+    brazil = list()
+    for c in range(0, 3):
+        estado['uf'] = str(input('Unidade Federativa: '))
+        estado['sigla'] = str(input('Sigla: '))
+        brazil.append(estado.copy())  #tem que usar o método copy para repetir sempre a primeira informação inserida
+    print(brazil)
+
+    for e in brazil:
+        for k, v in e.items():
+            print(f'O campo {k} tem valor {v}')
 
 
 
