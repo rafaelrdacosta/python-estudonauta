@@ -7,11 +7,9 @@ Calcule e acrescente, além da idade, com quantos anos a pessoa vai se aposentar
 
 from datetime import date
 
-
 funcionario = {}
 
-nome = str(input('Nome: ')).strip()
-funcionario['nome'] = nome
+funcionario['nome'] = str(input('Nome: ')).strip()
 
 ano_atual = date.today().year
 ano_nascimento = int(input('Ano de Nascimento: '))
@@ -33,6 +31,5 @@ while True:
         funcionario['aposentadoria'] = idade_aposentadoria
         break
 print('-='*30)
-print(funcionario)
 for k, v in funcionario.items():
-    print(f'{k} tem o valor {v}')
+    print(f'- {k} tem o valor {v}')

@@ -16,7 +16,6 @@ while True:
     nome = str(input('Nome: ')).strip()
     ficha['nome'] = nome
 
-
     while True:
         sexo = str(input('Sexo: [M/F] ')).strip().upper()[0]
         if sexo in 'MF':
@@ -51,12 +50,12 @@ media_idade = soma_idade / nr_pessoas
 print(pessoas)
 print(mulheres)
 print('-='*30)
-print(f'- O grupo tem {nr_pessoas}.')
-print(f'- A média de idade é de {media_idade:.2f} anos.')
-print(f'- A(s) mulher(es) cadastrada(s) foram: {mulheres}')
-print(f'- Lista das pessoas cadastradas que estão com idade acima da média: ')
+print(f'A) Ao todo tem(os) {nr_pessoas} cadastro(s).')
+print(f'B) A média de idade é de {media_idade:5.2f} anos.')
+print(f'C) A(s) mulher(es) cadastrada(s) foi(ram): {mulheres}')
+print(f'D) Lista das pessoas cadastradas que estão com idade acima da média: ')
 for p in pessoas:
-    if p['idade'] > media_idade:
+    if p['idade'] >= media_idade:
         for k, v in p.items():
             print(f'{k} = {v}; ', end=' ')
         print()

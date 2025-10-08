@@ -7,10 +7,9 @@ campeonato.
 '''
 
 ficha_atleta = dict()
-nome = str(input('Nome do jogador: '))
-ficha_atleta['nome'] = nome
+ficha_atleta['nome'] = str(input('Nome do jogador: '))
 while True:
-    qtd_partidas = int(input(f'Quantas partidas {nome} jogou? '))
+    qtd_partidas = int(input(f'Quantas partidas {ficha_atleta['nome']} jogou? '))
     if qtd_partidas > 0:
         break
     else:
@@ -18,7 +17,7 @@ while True:
 gols_partida = list()
 soma = 0
 for i in range(1, qtd_partidas + 1):
-    gols = int(input(f'Quantos gols na partida {i}: '))
+    gols = int(input(f' Quantos gols na partida {i}? '))
     gols_partida.append(gols)
     soma += gols
 ficha_atleta['gols'] = gols_partida
@@ -29,7 +28,7 @@ print('-='*30)
 for k, v in ficha_atleta.items():
     print(f'O campo {k} tem o valor {v}.')
 print('-='*30)
-print(f'O jogador {nome} jogou {qtd_partidas}.')
+print(f'O jogador {ficha_atleta['nome']} jogou {qtd_partidas} partidas.')
 for i, gols in enumerate(gols_partida):
     print(f'=> Na partida {i + 1}, fez {gols} gols.')
 print(f'Foi um total de {soma} gols.')

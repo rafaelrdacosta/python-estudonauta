@@ -474,3 +474,7 @@ a - Quantas pessoas foram cadastradas.
 b - A média de idade do grupo.
 c - Uma lista com todas as mulheres.
 d - Uma lista com todas as pessoas com idade acima da média.
+
+Exercício 095 - Aprimore o exercício 093 para que ele funcione com vários
+jogadores, incluindo um sistema de visualização de detalhes do aproveitamento de
+cada jogador.
