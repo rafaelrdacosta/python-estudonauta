@@ -28,7 +28,7 @@ while True:
     lista_atletas.append(ficha_atleta.copy())
 
     while True:
-        opcao = str(input('Quer continuar? [S/N] ')).strip().upper()[0]
+        opcao = str(input('Quer continuar? [S/N]')).strip().upper()[0]
         if opcao in 'SN':
             break
         else:
@@ -37,26 +37,19 @@ while True:
         break
 print(lista_atletas)
 print('-='*30)
-print(f'{"cod":<3} {"nome":<15} {"gols":<15} {"total":>6}')
-print('-'*43)
-cont = 1
-for i, atleta in enumerate(lista_atletas):
-    print(f'{i + 1:<3} {atleta["nome"]:<15} {str(atleta["gols"]):<15} {atleta["total"]:>6}')
-print('-'*43)
+print('cod ', end='')
+for i in ficha_atleta.keys():
+    print(f'{i:<15}', end='')
+print()
 
-while True:
-    nr_jogador = int(input('Mostrar dados de qual jogador? (Digite 999 para sair) '))
-    if nr_jogador == 999:
-        break
-
-    indice_jogador = nr_jogador - 1
-    if 0 <= indice_jogador < len(lista_atletas):
-        jogador = lista_atletas[indice_jogador]
-
-        print(f'-- LEVANTAMENTO DO JOGADOR {jogador["nome"].upper()}:')
-        for i, gols in enumerate(jogador['gols']):
-            print(f'No jogo {i + 1} fez {gols} gol(s).')
-        print(f'total de gols: {jogador["total"]}')
-    else:
-        print(f'<ERRO> Não existe jogador com o código {nr_jogador}.')
-print('<< VOLTE SEMPRE >>')
+print('-='*30)
+for k, v in enumerate(lista_atletas):
+    print(f'{k+1:<4}', end='')
+    for d in v.values():
+        print(f'{str(d):<15}', end='')
+    print()
+print('-='*30)
+print(f'O jogador {nome} jogou {qtd_partidas}.')
+for i, gols in enumerate(gols_partida):
+    print(f'=> Na partida {i + 1}, fez {gols} gols.')
+print(f'Foi um total de {soma} gols.')

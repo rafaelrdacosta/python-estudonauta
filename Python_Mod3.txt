@@ -227,6 +227,8 @@ por seus índices.
         for k, v in e.items():
             print(f'O campo {k} tem valor {v}')
 
+5) Funções
+
 
 
 
