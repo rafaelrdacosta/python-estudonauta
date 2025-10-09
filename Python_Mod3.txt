@@ -228,12 +228,74 @@ por seus índices.
             print(f'O campo {k} tem valor {v}')
 
 5) Funções
+    def soma(a, b):
+        print(f'A = {a} e B = {b}')
+        soma = a + b
+        print(f'A soma A + B = {soma}')
 
+    def contador(*num):
+        # (*) vai devolver uma tupla com os argumentos passados
+        tam = len(num)
+        print(f'Recebi os valores {num} e são ao todo {tam} números.')
+    aplicação => contador(1, 4, 5), contador(4, 3)
 
+    a) Interactive help
+        Função interna do Python => help()
+        Pode ser usada no console do Python ou no corpo do programa
+        Ex: help(len)
 
+        - Pode ser verificado a documentação relativa ao assunto
+            print(input.__doc__)
 
+    b) Docstrings
+        def contador(i, f, p):
+            '''
+            -> Faz uma contagem e mostra na tela.
+            :param i: início da contagem
+            :param f: fim da contagem
+            :param p: passo da contagem
+            :return: sem retorno
+            '''
+            c = i
+            while c <= f:
+                print(f'{c} ', end='')
+                c += p
+            print('FIM!')
 
+        help(contador) #retorna a docstrings que foi escrito entre aspas triplas na função
+        contador(2, 10, 2)
 
+    c) Parâmetros opcionais
+        #Pode ser colocado os valores que desejar como opcional (ou seja, a = 0; b = 0 ; c= 0).
+        def somar(a, b, c=0):
+            '''
+            -> Faz a soma de três valores e mostra o resultado na tela
+            :param a: o primeiro valor
+            :param b: o segundo valor
+            :param c: o terceiro valor, que é opcional (c = 0)
+            :return:
+            '''
+            s = a + b + c
+            print(f'A soma vale {s}')
+
+        somar(3, 2, 5)
+        somar(8, 3)
+
+    d) Escopo de variáveis
+        Variáveis globais - definidas no programa principal e tem o mesmo valor em todo o programa
+        Variáveis localis - definidas dentro de uma função e só existe nela
+
+        Para definir uma variável global dentro de uma função, utiliza-se a palavra reservada 'global'
+        def nomedafunçaõ():
+            global a    #a é nome da variável que será global
+            ....
+
+    e) Retornando valores
+        Utilizar a palavara reservada 'return'
+        Exemplo:
+        def multiplicar(a=0, b=0, c=0):
+            m = a * b * c
+            return m
 
 
 

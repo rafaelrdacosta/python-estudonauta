@@ -28,7 +28,9 @@ def dobra(lista):
 
 def soma_lista(*valores):
     s = 0
-    for num 
+    for num in valores:
+        s += num
+    print(f'Somando os valores {valores} temos {s}')
 #Progama principal
 lin()
 print('   CURSO EM VÍDEO   ')
@@ -49,3 +51,5 @@ contador(4, 4, 7, 6, 2)
 valores = [7, 2, 5, 0, 4]
 dobra(valores)
 print(valores)
+
+soma_lista(2,9, 4)

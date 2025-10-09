@@ -11,12 +11,13 @@ Saída
 '''
 
 def escreva(msg):
-    tam = len(msg)
-    print('~' * (tam+4))
-    print(f'{msg:^{tam+4}}')
-    print('~' * (tam + 4))
+    tam = len(msg) + 4
+    print('~' * (tam))
+    print(f'{msg:^{tam}}')
+    print('~' * (tam))
 
 
+#Programa principal
 escreva('Gustavo Guanabara')
 escreva('Curso em Python no Youtube')
 escreva('Cev')
