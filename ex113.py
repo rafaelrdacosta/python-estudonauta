@@ -14,7 +14,7 @@ def leiaInt(string):
         else:
             try:
                 num_int = int(num)
-            except ValueError:
+            except (ValueError, TypeError):
                 print('\033[0;31m<ERRO> Por favor, digite um número inteiro válido!\033[m')
             else:
                 return num_int
