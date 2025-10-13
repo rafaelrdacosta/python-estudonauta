@@ -8,7 +8,7 @@ várias notas de alunos e vai retornar um dicionário com as seguintes informaç
 - A situação (opcional)
 '''
 
-def notas(*notas, sit='False'):
+def notas(*notas, sit=False):
     '''
     -> Função para analisar notas e situações de vários alunos.
     :param notas: uma ou mais notas dos alunos(aceita quantos forem necessárias)

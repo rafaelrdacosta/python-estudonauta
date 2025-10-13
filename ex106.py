@@ -5,35 +5,36 @@ a palavra 'FIM', o programa se encerrará.
 OBS: use cores.
 '''
 
-def cabecalho_pcp(msg):
-    tam = len(msg) + 4
-    print('\033[30:43m~' * (tam))
-    print(f'{msg:^{tam}}')
-    print('~' * (tam))
-    print('\033[m')
-
-def cabecalho_func(msg):
-    tam = len(msg) + 4
-    print('\033[30:44m~' * (tam))
-    print(f'{msg:^{tam}}')
-    print('~' * (tam))
-    print('\033[m')
-
+c = ('\033[m',        #0 - sem cores
+     '\033[0;30;41m',  #1 - vermelho
+     '\033[0;30;42m',  #2 - verde
+     '\033[0;30;43m',  #3 - amarelo
+     '\033[0;30;44m',  #4 - azul
+     '\033[0;30;45m',  #5 - roxo
+     '\033[7;30m'      #6 - branco
+     );
 def my_help(string):
-    msg = f"Acessando o manual do comando '{string}'"
-    cabecalho_func(msg)
-    print('\033[30:47m')
+    titulo(f'Acessando o manual do comando \'{funcao}\'', 4)
+    print(c[6], end='')
     help(string)
-    print('\033[m')
+    print(c[0], end='')
+
+def titulo(msg, cor=0):
+    tam = len(msg) + 4
+    print(c[cor], end='')
+    print('~' * tam)
+    print(f' {msg}')
+    print('~' * tam)
+    print(c[0], end='')
+
 
 #Programa principal
+titulo('SISTEMA DE AJUDA PyHELP', 2)
 while True:
-    cabecalho_pcp('SISTEMA DE AJUDA PyHELP')
     funcao = str(input('Função ou Biblioteca > ')).strip().lower()
     if funcao == 'fim':
-        print('\033[30:45m~' * 20)
-        print(f'{'ATÉ LOGO!':^20}')
-        print('~' * 20)
-        print('\033[m')
         break
-    my_help(funcao)
+    else:
+        my_help(funcao)
+titulo('ATÉ LOGO!', 1)
+

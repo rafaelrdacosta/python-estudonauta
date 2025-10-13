@@ -297,14 +297,73 @@ por seus índices.
             m = a * b * c
             return m
 
+6) Módulos e pacotes
+    Você pode criar no projeto outros arquivo .py (módulos) com as funções
+separadas que poderão ser importadas para o programa principal.
 
+    Vantagens:
+        Organização do código
+        Facilita a manutenção
+        Ocultação do códgio detalhado
+        Reutilização em outros projetos
 
+    Pacote é um conjunto de módulos separados por assuntos. Ex: pacote uteis com os
+módulos: números, strings, datas, cores...
+    Como importar:
+        import uteis
+        from uteis import datas
+    Como criar um pacote: dentro de um projeto cria uma pasta com o nome do pacote,
+pois toda pasta é considerada um pacote.
+    Nesta pasta estará as pastas dos módulos com os arquivos __init__.py
 
+7) Tratamento de Erros e Exceções
+    Toda exceção é filha de uma classe maior EXCEPTION.
+    O mesmo try pode ter vários excepts:
+        except TypeError:
+        except ValueError:
+        except OSError:
+        ...
 
+    try:
+        <bloco de instruções que tentará ser executado>
+    except:
+        <mensagem de erro>
+    else:
+        <bloco de instruções se tudo ocorrer certo>
+    finally:
+        <bloco de instruções que vai ser executado sempre>
 
+    Ex 1:
+    try:
+    a = int(input('Numerador: '))
+    b = int(input('Denominador: '))
+    r = a / b
+    except Exception as erro:
+        print('Infelizmente tivemos um problema :(')
+        print(f'Problema encotrado foi {erro.__class__}')
 
+    else:
+        print(f'O resultado é {r:.1f}.')
+    finally:
+        print('Volte Sempre! Muito obrigado!')
 
-
+    Ex 2:
+    try:
+    a = int(input('Numerador: '))
+    b = int(input('Denominador: '))
+    r = a / b
+    except (ValueError, TypeError):
+        print('Tivemos um problema com os tipos de dado que você digitou.')
+    except ZeroDivisionError:
+        print('Não é possível dividir um número por zero.')
+    except KeyboardInterrupt:
+        print('O usuário preferiu não informar os dados.')
+    except Exception as erro:
+        print(f'O erro encontrado foi {erro.__class__}')
+    else:
+        print(f'O resultado é {r:.1f}.')
+    finally:
+        print('Volte Sempre! Muito obrigado!')
 
 
 

@@ -6,17 +6,19 @@ Ex:
 n = leiaint('Digite um n')
 '''
 
-def leiaint(string):
-    num = str(input(f'{string}'))
-    try:
-        int(num)
-    except ValueError:
-        print('\033[31mERRO! Digite um número inteiro válido.\033[m')
+def leiaInt(string):
+    valido = False
+    while not valido:
         num = str(input(f'{string}'))
-
+        try:
+            valor = int(num)
+            valido = True
+        except ValueError:
+            print('\033[31mERRO! Digite um número inteiro válido.\033[m')
+    return valor
 
 
 #Programa principal
 print('-' * 30)
-n = leiaint('Digite um número: ')
+num = leiaInt('Digite um número: ')
 print(f'Você acabou de digitar o número {num}.')
